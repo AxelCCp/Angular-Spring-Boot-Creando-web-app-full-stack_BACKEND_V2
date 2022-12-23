@@ -1,0 +1,15 @@
+package spring.back.apirest.model.entity;
+
+import java.io.Serializable;
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="roles")
+public class Usuario implements Serializable {
+
+	
+	private static final long serialVersionUID = -1387648715313379442L;
+
+}

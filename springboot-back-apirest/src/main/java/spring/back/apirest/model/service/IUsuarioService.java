@@ -1,0 +1,8 @@
+package spring.back.apirest.model.service;
+
+import spring.back.apirest.model.entity.Usuario;
+
+public interface IUsuarioService {
+
+	public Usuario findByUsername(String username);
+}

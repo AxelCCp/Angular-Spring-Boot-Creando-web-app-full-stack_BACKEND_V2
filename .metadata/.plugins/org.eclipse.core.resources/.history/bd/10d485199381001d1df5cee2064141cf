@@ -1,0 +1,8 @@
+package spring.back.apirest.auth;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class ResourceServerConfig ResourceServerConfigurerAdapter{
+	
+}

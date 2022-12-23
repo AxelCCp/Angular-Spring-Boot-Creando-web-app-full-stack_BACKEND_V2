@@ -1,0 +1,5 @@
+package spring.back.apirest.model.service;
+
+public class UsuarioService {
+
+}

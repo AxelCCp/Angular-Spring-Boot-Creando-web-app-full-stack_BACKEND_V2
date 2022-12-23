@@ -1,0 +1,5 @@
+package spring.back.apirest.auth;
+
+public class SpringSecurityConfig {
+
+}

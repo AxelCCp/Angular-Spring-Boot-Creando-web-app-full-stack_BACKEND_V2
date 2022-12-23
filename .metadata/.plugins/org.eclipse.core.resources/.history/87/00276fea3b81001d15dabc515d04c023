@@ -1,0 +1,37 @@
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('ASJHAS','AKSJHD','HasASG@KDJFH.COM','2018-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('ZIZU','SDS','A@KDJFH.COM','2019-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('OWR','ZXC','ADS@KDJFH.COM','2015-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('ZXCX','WQE','DF@KDJFH.COM','2016-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('MKO','RTY','XC@KDJFH.COM','2012-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('NMBFFS','QQW','WER@KDJFH.COM','2018-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('QUTW','ZXC','XCV@KDJFH.COM','2018-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('WMNWM','ERT','XCVj@KDJFH.COM','2021-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('ZOCXIU','ZXC','XCAV@KDJFH.COM','2022-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('AHSKJ','TYU','HASDASG@KDJFH.COM','2010-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('MAASD','QW','QEEEW@KDJFH.COM','2011-01-01');
+
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('ASJHAS','AKSJHD','1HasASG@KDJFH.COM','2018-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('ZIZU','SDS','1A@KDJFH.COM','2019-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('OWR','ZXC','1ADS@KDJFH.COM','2015-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('ZXCX','WQE','1DF@KDJFH.COM','2016-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('MKO','RTY','1XC@KDJFH.COM','2012-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('NMBFFS','QQW','1WER@KDJFH.COM','2018-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('QUTW','ZXC','1XCV@KDJFH.COM','2018-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('WMNWM','ERT','1XCVj@KDJFH.COM','2021-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('ZOCXIU','ZXC','1XCAV@KDJFH.COM','2022-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('AHSKJ','TYU','1HASDASG@KDJFH.COM','2010-01-01');
+INSERT INTO clientes (region_id, nombre, apellido, email, create_at) VALUES ('MAASD','QW','1QEEEW@KDJFH.COM','2011-01-01');
+
+
+
+INSERT INTO regiones (id, nombre) VALUES (1, Sudamérica);
+INSERT INTO regiones (id, nombre) VALUES (2, Cetroamérica);
+INSERT INTO regiones (id, nombre) VALUES (3, Norteamérica);
+INSERT INTO regiones (id, nombre) VALUES (4, Europa);
+INSERT INTO regiones (id, nombre) VALUES (5, África);
+INSERT INTO regiones (id, nombre) VALUES (6, Asia);
+INSERT INTO regiones (id, nombre) VALUES (7, Oceanía);
+INSERT INTO regiones (id, nombre) VALUES (8, Antártida);
+
+
+

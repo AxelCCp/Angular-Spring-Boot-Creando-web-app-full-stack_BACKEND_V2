@@ -1,0 +1,11 @@
+package spring.back.apirest.auth;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class SpringSecurityConfig extends WebSecurityConfigurerAdapter{
+
+	
+	@Autowired
+	private UserDetailsService usuarioService;
+}

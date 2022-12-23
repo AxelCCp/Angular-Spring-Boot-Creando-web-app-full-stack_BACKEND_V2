@@ -1,0 +1,97 @@
+package spring.back.apirest.auth;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
+
+//TRANSICIÓN :::
+//https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter
+//https://www.udemy.com/course/angular-spring/learn/lecture/12583976#questions/17577620
+
+/*
+@EnableGlobalMethodSecurity(securedEnabled=true)
+@Configuration
+public class SpringSecurityConfig  {
+	
+	@Bean
+	public static BCryptPasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();	
+	}
+	
+	@Bean
+	protected AuthenticationManager authenticationManager(AuthenticationManagerBuilder auth) throws Exception {
+		return auth.userDetailsService(this.usuarioService).passwordEncoder(passwordEncoder()).and().build();
+	}
+	
+	@Bean
+	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+		http.authorizeRequests()
+		.anyRequest().authenticated()
+		.and()
+		.csrf().disable()
+		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+		
+		return http.build();
+	}
+	
+	@Bean
+	protected AuthenticationManager authenticationManager2() throws Exception {
+		return super.authenticationManager();
+		
+	}
+	
+	@Autowired
+	private UserDetailsService usuarioService;	
+}
+
+*/
+
+
+//DEPRECATED
+@EnableGlobalMethodSecurity(securedEnabled = true) 																	//ES PARA USAR ANOTACIONES, PARA DETERMINAR LOS PERMISOS DE CADA METODO DEL CONTROLADOR. ESTO REEMPLAZA LOS ANTMACHERS DE ResourceServerConfig.
+@Configuration
+public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
+	
+	@Override
+	@Autowired
+	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+		// TODO Auto-generated method stub
+		auth.userDetailsService(this.usuarioService).passwordEncoder(passwordEncoder());
+	}
+
+	@Bean
+	public static BCryptPasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();	
+	}
+	
+	@Override
+	@Bean("authenticationManager")
+	protected AuthenticationManager authenticationManager() throws Exception {
+		return super.authenticationManager();
+	}
+	
+	//ESTE MISMO MÉTODO ESTA EN  ResourceServerConfig
+	//ESTO ES POR EL LADO DE SPRING
+	@Override
+	public void configure(HttpSecurity http) throws Exception {
+		http.authorizeRequests()
+		.anyRequest().authenticated()
+		.and()
+		.csrf().disable()  																		//SE DESHABILITA PROTECCIÓN PARA ATAQUES CRUZADOS YA Q SE ESTÁ USANDO ANGULAR.
+		.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);			//EL MANEJO DE SESIÓN SE DEJA DESHABILITADO POR EL LADO DE SPRING.
+	}
+	
+	@Autowired
+	private UserDetailsService usuarioService;
+}
+
+
+
