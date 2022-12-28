@@ -1,5 +1,0 @@
-package spring.back.apirest.model.entity;
-
-public class Region {
-
-}
